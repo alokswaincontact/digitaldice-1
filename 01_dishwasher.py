@@ -7,23 +7,19 @@ def get_rand():
 	for _ in range(5): counter[random.randint(1,5)] += 1
 	return counter
 
-def aggregate(n):
-	count, clumsy = 0, random.randint(1,5)
-	for i in range(n):
-		rand = get_rand()
-		for val, freq in rand.items():
-			if freq >= 4 and val == clumsy: count += 1
-	return count/float(n)
+def run_once():
+	clumsy = random.randint(1,5)
+	for val, freq in get_rand().items():
+		if freq >= 4 and val == clumsy: return 1
+	return 0
 
-def simulate(n, k):
-	return [aggregate(n) for _ in range(k)]
+def run_n(n):
+	n_runs = [run_once() for _ in xrange(n)]
+	return sum(n_runs)/float(len(n_runs))
 
-def plot(simulations):
-	plt.hist(simulations, bins=10)
-	plt.show()
+def plot(n, k):
+	plt.hist([run_n(n) for _ in xrange(k)], bins=20)
+	plt.show() # CLT
 
 if __name__ == '__main__':
-	simulations = simulate(500, 5000)
-	estimate = sum(simulations)/float(len(simulations))
-	print ("estimate = %s" % estimate)
-	plot(simulations)
+	plot(1000, 2000)
