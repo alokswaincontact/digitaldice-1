@@ -4,7 +4,7 @@ Python solutions to problems in the book [Digital Dice].
 
 #### Problems
 - [x] Clumsy dishwasher
-- [ ] Malt shop
+- [x] Malt shop
 - [ ] Parallel parking
 - [ ] Elevator
 - [ ] Elevator II
