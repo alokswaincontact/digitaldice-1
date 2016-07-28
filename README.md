@@ -1,11 +1,11 @@
 ### Digital Dice
 
-Python solutions to problems in the book [Digital Dice]. 
+Python solutions to problems in the book [Digital Dice].
 
 #### Problems
 - [x] Clumsy dishwasher
 - [x] Malt shop
-- [ ] Parallel parking
+- [x] Parallel parking
 - [ ] Elevator
 - [ ] Elevator II
 - [ ] Smoker
@@ -13,7 +13,7 @@ Python solutions to problems in the book [Digital Dice].
 - [ ] Burglar
 - [ ] Umbrella
 - [ ] Senators
-- [ ] Police 
+- [ ] Police
 - [ ] Paradox
 - [ ] Wait
 - [ ] Appeals
